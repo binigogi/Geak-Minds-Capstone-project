@@ -173,21 +173,18 @@ Flow:
 5. Answer summary, feature suggestion, and business insight queries.
 
 ## Project Structure
-project/
-|- app.py                          # Streamlit web UI (main entry point)
-|- notebooks/
-|  |- 01_olist_preprocessing.ipynb
-|- src/
-|  |- rag_core.py
-|  |- rag_engine.py
-|  |- dynamic_dataset_engine.py
-|- processed/
-|  |- rag/
-|- sample_data/
-|  |- titanic.csv
-|- .env
-|- requirements.txt
-|- README.md
+├── app.py (Streamlit UI)
+├── README.md (with Quick Start)
+├── requirements.txt
+├── .gitignore (protects .env & .venv)
+├── notebooks/01_olist_preprocessing.ipynb
+├── src/
+│   ├── rag_core.py
+│   ├── rag_engine.py
+│   └── dynamic_dataset_engine.py
+├── archive/ (all 10 Olist CSVs)
+├── processed/
+└── sample_data/titanic.csv
 
 ## Setup
 
