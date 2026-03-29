@@ -98,6 +98,7 @@ Geak-Minds-Capstone-project/
 │
 └── sample_data/
     └── titanic.csv                    # Generic dataset for testing
+```
 
 ## Proposed Architecture
 
