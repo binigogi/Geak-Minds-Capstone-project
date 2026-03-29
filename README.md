@@ -213,7 +213,7 @@ Flow:
 4. Build session vector store (no disk dependency).
 5. Answer summary, feature suggestion, and business insight queries.
 
-*(For a detailed visual structure with emojis, see the [Project Structure](#-project-structure) section at the top.)*
+*(For a detailed visual structure, see the [Project Structure](#-project-structure) section at the top.)*
 
 ## Setup
 
