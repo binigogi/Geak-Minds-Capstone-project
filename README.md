@@ -59,18 +59,18 @@ Then upload a dataset and ask questions. ✨
 
 For full setup details, see [Setup](#setup) section.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Geak-Minds-Capstone-project/
 │
-├── 🎯 app.py                          # Streamlit web UI (main entry point)
-├── 📖 README.md                       # Full documentation
-├── 📋 requirements.txt                # Python dependencies
-├── .env                               # API keys (not in git) ⚠️
-├── .gitignore                         # Git ignore rules
+├── app.py                          # Streamlit web UI (main entry point)
+├── README.md                       # Full documentation
+├── requirements.txt                # Python dependencies
+├── .env                            
+├── .gitignore                       
 │
-├── 📚 notebooks/
+├── notebooks/
 │   └── 01_olist_preprocessing.ipynb   # Data cleaning & feature engineering
 │
 ├── 🔧 src/
@@ -78,7 +78,7 @@ Geak-Minds-Capstone-project/
 │   ├── rag_engine.py                  # Olist-specific RAG demo
 │   └── dynamic_dataset_engine.py      # Generic dataset profiling (any CSV/Excel)
 │
-├── 📊 archive/
+├── archive/
 │   ├── olist_customers_dataset.csv
 │   ├── olist_orders_dataset.csv
 │   ├── olist_order_items_dataset.csv
@@ -90,24 +90,14 @@ Geak-Minds-Capstone-project/
 │   ├── product_category_name_translation.csv
 │   └── synthetic_dataset.csv          # Sample e-commerce data
 │
-├── 🗂️ processed/
+├── processed/
 │   └── rag/                           # Generated RAG artifacts
 │       ├── context_chunks.jsonl       # Text chunks for retrieval
 │       ├── business_brief.txt         # High-level summary
 │       └── *_metadata_profile.json    # Column profiles
 │
-└── 📦 sample_data/
+└── sample_data/
     └── titanic.csv                    # Generic dataset for testing
-```
-
-### Key Files
-| File | Purpose |
-|------|---------|
-| **app.py** | Launch point: `streamlit run app.py` |
-| **notebooks/01_olist_preprocessing.ipynb** | Data pipeline (clean, feature engineer, encode, normalize) |
-| **src/dynamic_dataset_engine.py** | Load ANY dataset, auto-profile, generate insights |
-| **archive/** | Raw Olist data (10 CSV files) |
-| **.gitignore** | Protects .env (API keys) & .venv (virtual env) |
 
 ## Proposed Architecture
 
