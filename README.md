@@ -59,6 +59,56 @@ Then upload a dataset and ask questions. ✨
 
 For full setup details, see [Setup](#setup) section.
 
+## 📁 Project Structure
+
+```
+Geak-Minds-Capstone-project/
+│
+├── 🎯 app.py                          # Streamlit web UI (main entry point)
+├── 📖 README.md                       # Full documentation
+├── 📋 requirements.txt                # Python dependencies
+├── .env                               # API keys (not in git) ⚠️
+├── .gitignore                         # Git ignore rules
+│
+├── 📚 notebooks/
+│   └── 01_olist_preprocessing.ipynb   # Data cleaning & feature engineering
+│
+├── 🔧 src/
+│   ├── rag_core.py                    # RAG prompt building & LLM calls
+│   ├── rag_engine.py                  # Olist-specific RAG demo
+│   └── dynamic_dataset_engine.py      # Generic dataset profiling (any CSV/Excel)
+│
+├── 📊 archive/
+│   ├── olist_customers_dataset.csv
+│   ├── olist_orders_dataset.csv
+│   ├── olist_order_items_dataset.csv
+│   ├── olist_order_payments_dataset.csv
+│   ├── olist_order_reviews_dataset.csv
+│   ├── olist_products_dataset.csv
+│   ├── olist_sellers_dataset.csv
+│   ├── olist_geolocation_dataset.csv
+│   ├── product_category_name_translation.csv
+│   └── synthetic_dataset.csv          # Sample e-commerce data
+│
+├── 🗂️ processed/
+│   └── rag/                           # Generated RAG artifacts
+│       ├── context_chunks.jsonl       # Text chunks for retrieval
+│       ├── business_brief.txt         # High-level summary
+│       └── *_metadata_profile.json    # Column profiles
+│
+└── 📦 sample_data/
+    └── titanic.csv                    # Generic dataset for testing
+```
+
+### Key Files
+| File | Purpose |
+|------|---------|
+| **app.py** | Launch point: `streamlit run app.py` |
+| **notebooks/01_olist_preprocessing.ipynb** | Data pipeline (clean, feature engineer, encode, normalize) |
+| **src/dynamic_dataset_engine.py** | Load ANY dataset, auto-profile, generate insights |
+| **archive/** | Raw Olist data (10 CSV files) |
+| **.gitignore** | Protects .env (API keys) & .venv (virtual env) |
+
 ## Proposed Architecture
 
 ### 1) Data Layer
@@ -172,22 +222,7 @@ Flow:
 4. Build session vector store (no disk dependency).
 5. Answer summary, feature suggestion, and business insight queries.
 
-## Project Structure
-project/
-|- app.py                          # Streamlit web UI (main entry point)
-|- notebooks/
-|  |- 01_olist_preprocessing.ipynb
-|- src/
-|  |- rag_core.py
-|  |- rag_engine.py
-|  |- dynamic_dataset_engine.py
-|- processed/
-|  |- rag/
-|- sample_data/
-|  |- titanic.csv
-|- .env
-|- requirements.txt
-|- README.md
+*(For a detailed visual structure, see the [Project Structure](#-project-structure) section at the top.)*
 
 ## Setup
 
