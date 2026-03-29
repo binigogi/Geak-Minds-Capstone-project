@@ -1,0 +1,20 @@
+# Core data
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=14.0.0
+openpyxl>=3.1.0
+
+# Embeddings and vector store
+sentence-transformers==2.7.0
+faiss-cpu==1.7.4
+
+# LLM providers
+groq==0.9.0
+google-generativeai==0.5.4
+
+# Utilities
+requests>=2.31.0
+python-dotenv==1.0.1
+
+# UI
+streamlit>=1.35.0
